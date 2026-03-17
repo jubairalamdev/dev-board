@@ -4,7 +4,7 @@ import Tasks from './Tasks/Tasks';
 import axios from 'axios';
 import TasksSkeleton from './TasksSkeleton/TasksSkeleton';
 
-const taskData = axios.get("../../../../public/database/problems.json");
+const taskData = axios.get("../../../database/problems.json");
 
 const Board = ({completeBtnHandler, activities}) => {
     return (
