@@ -1,4 +1,3 @@
-import React from 'react';
 import './BoardBanner.css'
 import { Check, CalendarDays } from 'lucide-react';
 import notePng from '../../../../../public/assets/board.png';
@@ -12,9 +11,8 @@ const formattedDate = now.toLocaleDateString('en-US', {
     year: 'numeric'
 }).replace(/,/g, '');
 
-const BoardBanner = () => {
-
-
+const BoardBanner = ({activities}) => {
+    
     return (
         <div className='grid grid-cols-4 gap-2'>
             <div className='bg-base-300/60 p-2 rounded-2xl flex gap-3 items-center'>
@@ -24,12 +22,12 @@ const BoardBanner = () => {
                     </div>
                 </div>
                 <div>
-                    <p className="text-base-content/70">Task Assigned</p>
-                    <span className='text-lg font-semibold'>0</span>
+                    <p className="text-base-content/70">Task Completed</p>
+                    <span className='text-lg font-semibold'>{activities.length}</span>
                 </div>
             </div>
             <div className='bg-gradient p-3 col-span-2 rounded-2xl flex items-center gap-3'>
-                <img src={notePng} alt="" srcset="" />
+                <img src={notePng} alt=""/>
                 <h2 className='text-base-100 font-semibold text-xl'>Discover  Something New Today</h2>
             </div>
             <div className='bg-base-300/60 p-2 rounded-2xl flex gap-3 items-center'>

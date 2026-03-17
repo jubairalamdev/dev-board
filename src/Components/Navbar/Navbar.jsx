@@ -1,9 +1,13 @@
 import logoPng from '../../../public/assets/logo.png';
 import themeBtn from '../../../public/assets/theme-btn.png';
-import React from 'react';
+import React, { use } from 'react';
 import { Check } from 'lucide-react';
+import axios from 'axios';
+
+const taskDataPromise = axios.get("../../../../public/database/problems.json");
 
 const Navbar = () => {
+    const taskData = use(taskDataPromise).data;
     return (
         <div className="navbar bg-base-100 shadow-sm rounded-2xl">
             <div className="flex-1">
@@ -17,17 +21,17 @@ const Navbar = () => {
                     <div className='bg-primary/80 text-base-100 rounded-xl px-1 py-0.5'>
                         <Check />
                     </div>
-                    <span className='text-xl font-semibold'>0</span>
+                    <span className='text-xl font-semibold'>{taskData.length}</span>
                 </div>
                 <label className="swap swap-rotate py-1 px-2 bg-base-300/80 rounded-full">
                     {/* this hidden checkbox controls the state */}
                     <input type="checkbox" className="theme-controller" value="dark" />
 
                     {/* sun icon */}
-                    <img src={themeBtn} alt="" srcset="" className='w-7'/>
+                    <img src={themeBtn} alt="" className='w-7'/>
 
                     {/* moon icon */}
-                    <img src={themeBtn} alt="" srcset="" className='w-7'/>
+                    <img src={themeBtn} alt="" className='w-7'/>
                 </label>
             </div>
         </div>

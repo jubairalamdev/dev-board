@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { use } from 'react';
 import Task from './Task/Task';
 
-const Tasks = () => {
+const Tasks = ({taskData, completeBtnHandler}) => {
+
+
+
+    const tasksRes = use(taskData);
+    const tasksData = tasksRes.data;
+
     return (
         <div className='rounded-2xl grid grid-cols-3 gap-3'>
-            <Task></Task>
-            <Task></Task>
-            <Task></Task>
-            <Task></Task>
-            <Task></Task>
+            {
+                tasksData.map(task => <Task task={task} key={task.id} completeBtnHandler={completeBtnHandler}></Task>)
+            }
         </div>
     );
 };
