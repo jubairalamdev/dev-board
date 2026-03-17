@@ -9,7 +9,7 @@ const Tasks = ({taskData, completeBtnHandler}) => {
     const tasksData = tasksRes.data;
 
     return (
-        <div className='rounded-2xl grid grid-cols-3 gap-3'>
+        <div className='rounded-2xl grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3'>
             {
                 tasksData.map(task => <Task task={task} key={task.id} completeBtnHandler={completeBtnHandler}></Task>)
             }

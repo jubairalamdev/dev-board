@@ -20,7 +20,7 @@ const BoardBody = () => {
     }
 
     return (
-        <div className='grid grid-cols-4 gap-3'>
+        <div className='grid grid-cols-1 xl:grid-cols-4 gap-3'>
             <Board completeBtnHandler={completeBtnHandler} activities={activities}></Board>
             <Activities activities={activities} clearActivities={clearActivities}></Activities>
         </div>

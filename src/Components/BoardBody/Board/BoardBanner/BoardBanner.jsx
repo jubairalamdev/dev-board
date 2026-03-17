@@ -14,7 +14,7 @@ const formattedDate = now.toLocaleDateString('en-US', {
 const BoardBanner = ({activities}) => {
     
     return (
-        <div className='grid grid-cols-4 gap-2'>
+        <div className='grid grid-cols-1 lg:grid-cols-4 gap-2'>
             <div className='bg-base-300/60 p-2 rounded-2xl flex gap-3 items-center'>
                 <div className="bg-base-100 rounded-3xl py-2 px-3 flex items-center gap-2 w-fit h-fit">
                     <div className='bg-primary/80 text-base-100 rounded-xl px-1 py-0.5'>

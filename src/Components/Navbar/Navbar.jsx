@@ -11,7 +11,7 @@ const Navbar = () => {
     return (
         <div className="navbar bg-base-100 shadow-sm rounded-2xl">
             <div className="flex-1">
-                <a className="btn btn-ghost text-xl">
+                <a className="btn btn-ghost text-xl" href='/'>
                     <img src={logoPng} alt="Logo" className='w-7' />
                     <h2 className='text-base-content/90 font-medium text-2xl'>Dev<span className='font-bold'>Board</span></h2>
                 </a>
