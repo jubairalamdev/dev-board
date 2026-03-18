@@ -7,15 +7,21 @@ const BoardBody = () => {
     const [activities, setActivities] = useState([]);
 
     const completeBtnHandler = (task) => {
+        const completeBtn = document.getElementById(`completeBtnId-${task.id}`);
         if (!activities.includes(task)) {
             const newActivities = [...activities, task];
             setActivities(newActivities);
+            completeBtn.setAttribute('disabled', '');
+            completeBtn.innerText = "Completed"
         }
     }
 
     const clearActivities = () => {
+        const allCompleteBtns = [...document.getElementsByClassName("completeBtns")];
+        console.log(allCompleteBtns)
         if (activities.length>0) {
             setActivities([]);
+            allCompleteBtns.forEach(btn => btn.disabled = false);
         }
     }
 
