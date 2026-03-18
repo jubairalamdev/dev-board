@@ -13,7 +13,7 @@ const Task = ({task, completeBtnHandler}) => {
                     <p className="text-base-content/60 text-sm">Deadline</p>
                     <p className='text-sm'>{task.deadline}</p>
                 </div>
-                <button className='btn btn-primary' onClick={()=>{completeBtnHandler(task)}}>Complete</button>
+                <button className='btn btn-primary completeBtns' onClick={()=>{completeBtnHandler(task)}} id={`completeBtnId-${task.id}`}>Complete</button>
             </div>
         </div>
     );

@@ -4,7 +4,7 @@ import Tasks from './Tasks/Tasks';
 import axios from 'axios';
 import TasksSkeleton from './TasksSkeleton/TasksSkeleton';
 
-const taskData = axios.get("../../../database/problems.json");
+const taskData = axios.get("https://gist.githubusercontent.com/jubairalamdev/199273327a99c2336beca55c0ad87ae4/raw/063e65b8afb2419273f74f0496a5fbdb58f4407f/gistfile1.txt");
 
 const Board = ({completeBtnHandler, activities}) => {
     return (

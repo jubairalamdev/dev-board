@@ -4,7 +4,7 @@ import React, { use } from 'react';
 import { Check } from 'lucide-react';
 import axios from 'axios';
 
-const taskDataPromise = axios.get("../../database/problems.json");
+const taskDataPromise = axios.get("https://gist.githubusercontent.com/jubairalamdev/199273327a99c2336beca55c0ad87ae4/raw/063e65b8afb2419273f74f0496a5fbdb58f4407f/gistfile1.txt");
 
 const Navbar = () => {
     const taskData = use(taskDataPromise).data;
