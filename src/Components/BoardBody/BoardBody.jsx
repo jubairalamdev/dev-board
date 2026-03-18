@@ -12,7 +12,7 @@ const BoardBody = () => {
             const newActivities = [...activities, task];
             setActivities(newActivities);
             completeBtn.setAttribute('disabled', '');
-            completeBtn.innerText = "Completed"
+            completeBtn.innerText = "Completed";
         }
     }
 
@@ -21,7 +21,10 @@ const BoardBody = () => {
         console.log(allCompleteBtns)
         if (activities.length>0) {
             setActivities([]);
-            allCompleteBtns.forEach(btn => btn.disabled = false);
+            allCompleteBtns.forEach(btn => {
+                btn.disabled = false;
+                btn.innerHTML = "Complete"
+            });
         }
     }
 
